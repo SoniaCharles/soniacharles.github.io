@@ -6,7 +6,7 @@
 body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
-    background: #f9f9f9;
+    background: #f5f7fa;
     color: #333;
     line-height: 1.6;
 }
@@ -76,17 +76,37 @@ h2 {
 }
 
 /* ==== ABOUT SECTION ==== */
-#about p {
+.about-content {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text p {
     font-size: 1.1rem;
     line-height: 1.8;
-    text-align: center;
-    max-width: 800px;
-    margin: 0 auto 40px;
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+.about-image {
+    flex: 0 0 300px;
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
 }
 
 .school-images {
-    text-align: center;
-    margin-top: 40px;
+    margin-top: 20px;
 }
 
 .school-images img {
