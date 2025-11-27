@@ -222,3 +222,94 @@ h2 {
         grid-template-columns: 1fr;
     }
 }
+
+#education {
+  margin: 2rem 0;
+}
+
+#education h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: #2c3e50;
+  border-bottom: 3px solid #18453B;
+  padding-bottom: 0.5rem;
+}
+
+.education-entry {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background: #f8f9fa;
+  border-left: 4px solid #18453B;
+  border-radius: 4px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.education-entry:hover {
+  transform: translateX(4px);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.education-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 0.75rem;
+}
+
+.education-entry h3 {
+  font-size: 1.3rem;
+  color: #18453B;
+  margin: 0 0 0.5rem 0;
+}
+
+.degree {
+  margin: 0;
+  font-size: 1.05rem;
+  color: #34495e;
+}
+
+.date {
+  color: #7f8c8d;
+  font-style: italic;
+  white-space: nowrap;
+  margin: 0;
+}
+
+.coursework {
+  margin: 0.75rem 0 0 0;
+  line-height: 1.6;
+  color: #555;
+}
+
+.education-details {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+
+.badge {
+  display: inline-block;
+  background: #18453B;
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.gpa {
+  color: #2c3e50;
+  font-weight: 600;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .education-header {
+    flex-direction: column;
+  }
+  
+  .date {
+    margin-top: 0.5rem;
+  }
+}
