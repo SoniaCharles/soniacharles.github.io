@@ -1,31 +1,281 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title>Campus Event Scheduler | Sonia</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <title>Campus Event Scheduler | Sonia Charles Thalatoti</title>
+    <style>
+        .project-hero {
+            background: linear-gradient(135deg, #6c63ff, #9d7aff);
+            color: white;
+            padding: 80px 20px 60px;
+            text-align: center;
+        }
+
+        .project-hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        .project-hero .tech-stack {
+            display: inline-flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .tech-badge {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .project-overview {
+            max-width: 900px;
+            margin: -30px auto 0;
+            padding: 0 20px;
+        }
+
+        .overview-card {
+            background: white;
+            border-radius: 12px;
+            padding: 40px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            margin-bottom: 40px;
+        }
+
+        .overview-card p {
+            font-size: 1.15rem;
+            line-height: 1.8;
+            color: #555;
+            margin: 0;
+        }
+
+        .content-section {
+            max-width: 900px;
+            margin: 0 auto 50px;
+            padding: 0 20px;
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 25px;
+        }
+
+        .section-icon {
+            font-size: 1.5rem;
+        }
+
+        .section-header h2 {
+            font-size: 1.8rem;
+            margin: 0;
+            color: #333;
+            text-align: left;
+        }
+
+        .feature-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .feature-list li {
+            background: white;
+            padding: 20px 25px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #6c63ff;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .feature-list li:hover {
+            transform: translateX(5px);
+            box-shadow: 0 4px 12px rgba(108, 99, 255, 0.15);
+        }
+
+        .feature-list strong {
+            color: #6c63ff;
+            font-size: 1.05rem;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .skill-item {
+            background: white;
+            padding: 15px 20px;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: 500;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            transition: all 0.2s ease;
+        }
+
+        .skill-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 12px rgba(108, 99, 255, 0.15);
+            color: #6c63ff;
+        }
+
+        .impact-section {
+            background: linear-gradient(135deg, #f5f7fa, #e8ecf1);
+            border-radius: 12px;
+            padding: 40px;
+            margin-top: 40px;
+            border: 2px solid #e0e4e9;
+        }
+
+        .impact-section h2 {
+            color: #6c63ff;
+            margin-top: 0;
+            margin-bottom: 20px;
+            text-align: left;
+            font-size: 1.8rem;
+        }
+
+        .impact-section p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #555;
+            margin: 0;
+        }
+
+        @media (max-width: 768px) {
+            .project-hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .tech-badge {
+                font-size: 0.85rem;
+                padding: 6px 12px;
+            }
+
+            .overview-card {
+                padding: 30px 25px;
+            }
+
+            .section-header h2 {
+                font-size: 1.5rem;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .impact-section {
+                padding: 30px 25px;
+            }
+        }
+    </style>
 </head>
-<script src="script.js"></script>
-
 <body>
+    <nav>
+        <div><strong>Sonia Charles Thalatoti</strong></div>
+        <div>
+            <a href="index.html">Home</a>
+            <a href="projects.html" class="active">Projects</a>
+            <a href="index.html#skills">Skills</a>
+            <a href="index.html#contact">Contact</a>
+        </div>
+    </nav>
 
-<nav>
-    <div><strong>Sonia Charles Thalatoti</strong></div>
-    <div>
-        <a href="index.html">Home</a>
-        <a href="projects.html" class="active">Projects</a>
-        <a href="index.html#skills">Skills</a>
-        <a href="index.html#contact">Contact</a>
+    <div class="project-hero">
+        <h1>Campus Event Scheduler</h1>
+        <div class="tech-stack">
+            <span class="tech-badge">Java</span>
+            <span class="tech-badge">Android Studio</span>
+            <span class="tech-badge">Google Maps API</span>
+            <span class="tech-badge">MySQL</span>
+            <span class="tech-badge">Material Design</span>
+        </div>
     </div>
-</nav>
 
-<section class="section">
-    <h2>Campus Event Scheduler</h2>
-    <p>
-        Collaborated on a campus event application built in Java using Android Studio.
-        Integrated Google Maps API for event locations, backend MySQL for event management,
-        and designed UI using Material Design.
-    </p>
-</section>
+    <div class="project-overview">
+        <div class="overview-card">
+            <p>
+                Collaborated on a comprehensive campus event application built in Java using Android Studio. 
+                The app streamlines event discovery and management for students by integrating Google Maps API 
+                for precise event locations, a MySQL backend for robust event data management, and a modern 
+                user interface designed with Material Design principles.
+            </p>
+        </div>
+    </div>
 
+    <div class="content-section">
+        <div class="section-header">
+            <span class="section-icon">🔷</span>
+            <h2>Key Features</h2>
+        </div>
+        <ul class="feature-list">
+            <li>
+                <strong>Interactive Map Integration:</strong> Implemented Google Maps API to display event locations 
+                with custom markers, allowing users to visualize campus events geographically and get directions.
+            </li>
+            <li>
+                <strong>Event Management System:</strong> Built a comprehensive backend using MySQL to handle event 
+                creation, updates, and queries, ensuring reliable data persistence and retrieval.
+            </li>
+            <li>
+                <strong>Material Design UI:</strong> Designed an intuitive and modern user interface following Material 
+                Design guidelines, enhancing user experience with smooth animations and responsive layouts.
+            </li>
+            <li>
+                <strong>Event Discovery:</strong> Developed browsing and search functionality to help students easily 
+                find events by date, category, location, or keywords.
+            </li>
+            <li>
+                <strong>User Authentication:</strong> Implemented secure user login and registration to enable 
+                personalized event tracking and preferences.
+            </li>
+        </ul>
+    </div>
+
+    <div class="content-section">
+        <div class="section-header">
+            <span class="section-icon">🔷</span>
+            <h2>Technical Skills Applied</h2>
+        </div>
+        <div class="skills-grid">
+            <div class="skill-item">Java Development</div>
+            <div class="skill-item">Android SDK</div>
+            <div class="skill-item">Google Maps API</div>
+            <div class="skill-item">MySQL Database</div>
+            <div class="skill-item">RESTful APIs</div>
+            <div class="skill-item">Material Design</div>
+            <div class="skill-item">UI/UX Design</div>
+            <div class="skill-item">Team Collaboration</div>
+        </div>
+    </div>
+
+    <div class="content-section">
+        <div class="impact-section">
+            <h2>🎯 Project Impact</h2>
+            <p>
+                This collaborative project enhanced campus engagement by providing students with a centralized 
+                platform to discover and attend events. The application successfully combined location-based 
+                services, database management, and modern mobile UI design to create a practical solution for 
+                the campus community. The experience strengthened my skills in full-stack mobile development, 
+                API integration, and collaborative software engineering.
+            </p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
