@@ -1,75 +1,273 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title>3D Modeling | Sonia</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <title>3D Modeling Project | Sonia Charles Thalatoti</title>
+    <style>
+        .project-hero {
+            background: linear-gradient(135deg, #6c63ff, #9d7aff);
+            color: white;
+            padding: 80px 20px 60px;
+            text-align: center;
+        }
+
+        .project-hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        .project-hero .tech-stack {
+            display: inline-flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .tech-badge {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .project-overview {
+            max-width: 900px;
+            margin: -30px auto 0;
+            padding: 0 20px;
+        }
+
+        .overview-card {
+            background: white;
+            border-radius: 12px;
+            padding: 40px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            margin-bottom: 40px;
+        }
+
+        .overview-card p {
+            font-size: 1.15rem;
+            line-height: 1.8;
+            color: #555;
+            margin: 0;
+        }
+
+        .content-section {
+            max-width: 900px;
+            margin: 0 auto 50px;
+            padding: 0 20px;
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 25px;
+        }
+
+        .section-icon {
+            font-size: 1.5rem;
+        }
+
+        .section-header h2 {
+            font-size: 1.8rem;
+            margin: 0;
+            color: #333;
+            text-align: left;
+        }
+
+        .feature-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .feature-list li {
+            background: white;
+            padding: 20px 25px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #6c63ff;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .feature-list li:hover {
+            transform: translateX(5px);
+            box-shadow: 0 4px 12px rgba(108, 99, 255, 0.15);
+        }
+
+        .feature-list strong {
+            color: #6c63ff;
+            font-size: 1.05rem;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .skill-item {
+            background: white;
+            padding: 15px 20px;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: 500;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            transition: all 0.2s ease;
+        }
+
+        .skill-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 12px rgba(108, 99, 255, 0.15);
+            color: #6c63ff;
+        }
+
+        .final-output {
+            background: linear-gradient(135deg, #f5f7fa, #e8ecf1);
+            border-radius: 12px;
+            padding: 40px;
+            margin-top: 40px;
+            border: 2px solid #e0e4e9;
+        }
+
+        .final-output h2 {
+            color: #6c63ff;
+            margin-top: 0;
+            margin-bottom: 20px;
+            text-align: left;
+            font-size: 1.8rem;
+        }
+
+        .final-output p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #555;
+            margin: 0;
+        }
+
+        @media (max-width: 768px) {
+            .project-hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .tech-badge {
+                font-size: 0.85rem;
+                padding: 6px 12px;
+            }
+
+            .overview-card {
+                padding: 30px 25px;
+            }
+
+            .section-header h2 {
+                font-size: 1.5rem;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .final-output {
+                padding: 30px 25px;
+            }
+        }
+    </style>
 </head>
-<script src="script.js"></script>
-
 <body>
+    <nav>
+        <div><strong>Sonia Charles Thalatoti</strong></div>
+        <div>
+            <a href="index.html">Home</a>
+            <a href="projects.html" class="active">Projects</a>
+            <a href="index.html#skills">Skills</a>
+            <a href="index.html#contact">Contact</a>
+        </div>
+    </nav>
 
-<nav>
-    <div><strong>Sonia Charles Thalatoti</strong></div>
-    <div>
-        <a href="index.html">Home</a>
-        <a href="projects.html" class="active">Projects</a>
-        <a href="index.html#skills">Skills</a>
-        <a href="index.html#contact">Contact</a>
+    <div class="project-hero">
+        <h1>Computer Graphics Project – 3D Letter Modeling & Texturing</h1>
+        <div class="tech-stack">
+            <span class="tech-badge">C++</span>
+            <span class="tech-badge">OpenGL</span>
+            <span class="tech-badge">Computer Graphics</span>
+        </div>
     </div>
-</nav>
-<section class="project-section">
 
-    <h1>Computer Graphics Project – 3D Letter Modeling & Texturing</h1>
-    <h3>(C++ | OpenGL | Computer Graphics)</h3>
+    <div class="project-overview">
+        <div class="overview-card">
+            <p>
+                This project involved designing and rendering a 3D model of the letter <strong>"S"</strong> using C++ and OpenGL. 
+                The model was constructed by tessellating a 2D shape in the XY-plane and extruding it along the Z-axis to 
+                form a volumetric 3D object. The project focused heavily on geometry generation, vertex construction, 
+                texturing, and understanding computer graphics pipeline fundamentals.
+            </p>
+        </div>
+    </div>
 
-    <p>
-        This project involved designing and rendering a 3D model of the letter <strong>“S”</strong> using C++ and OpenGL. 
-        The model was constructed by tessellating a 2D shape in the XY-plane and extruding it along the Z-axis to 
-        form a volumetric 3D object. The project focused heavily on geometry generation, vertex construction, 
-        texturing, and understanding computer graphics pipeline fundamentals.
-    </p>
+    <div class="content-section">
+        <div class="section-header">
+            <span class="section-icon">🔷</span>
+            <h2>Key Contributions</h2>
+        </div>
+        <ul class="feature-list">
+            <li>
+                <strong>3D Modeling:</strong> Created a precise 2D outline of the letter "S" using tessellation, then extruded 
+                the polygon to generate a complete 3D representation.
+            </li>
+            <li>
+                <strong>Geometry Construction:</strong> Computed and connected vertices to form quads for the side surfaces, ensuring 
+                clean edges, smooth curvature, and a visually accurate 3D structure.
+            </li>
+            <li>
+                <strong>Texture Mapping:</strong> Applied three different textures—one for the top, one for the bottom, and a 
+                continuous "rubber-band" style texture for the sides to simulate realistic 2D-to-3D unfolding.
+            </li>
+            <li>
+                <strong>OpenGL Techniques:</strong> Implemented texture coordinate mapping, vertex manipulation, normal generation, 
+                and real-time rendering using the modern OpenGL pipeline.
+            </li>
+        </ul>
+    </div>
 
-    <h2>🔷 Key Contributions</h2>
-    <ul>
-        <li>
-            <strong>3D Modeling:</strong> Created a precise 2D outline of the letter “S” using tessellation, then extruded 
-            the polygon to generate a complete 3D representation.
-        </li>
-        <li>
-            <strong>Geometry Construction:</strong> Computed and connected vertices to form quads for the side surfaces, ensuring 
-            clean edges, smooth curvature, and a visually accurate 3D structure.
-        </li>
-        <li>
-            <strong>Texture Mapping:</strong> Applied three different textures—one for the top, one for the bottom, and a 
-            continuous “rubber-band” style texture for the sides to simulate realistic 2D-to-3D unfolding.
-        </li>
-        <li>
-            <strong>OpenGL Techniques:</strong> Implemented texture coordinate mapping, vertex manipulation, normal generation, 
-            and real-time rendering using the modern OpenGL pipeline.
-        </li>
-    </ul>
+    <div class="content-section">
+        <div class="section-header">
+            <span class="section-icon">🔷</span>
+            <h2>Technical Skills & Concepts Learned</h2>
+        </div>
+        <div class="skills-grid">
+            <div class="skill-item">Polygon Tessellation</div>
+            <div class="skill-item">Geometric Modeling</div>
+            <div class="skill-item">Vertex Generation</div>
+            <div class="skill-item">UV Mapping</div>
+            <div class="skill-item">3D Extrusion</div>
+            <div class="skill-item">OpenGL Rendering</div>
+            <div class="skill-item">Graphics Pipeline</div>
+            <div class="skill-item">Real-Time Rendering</div>
+        </div>
+    </div>
 
-    <h2>🔷 Technical Skills & Concepts Learned</h2>
-    <ul>
-        <li>Polygon tessellation & geometric modeling</li>
-        <li>Manual vertex + quad generation</li>
-        <li>Texture coordinate calculations (UV mapping)</li>
-        <li>Extrusion along an axis to create 3D forms</li>
-        <li>Using OpenGL for rendering textured 3D objects</li>
-        <li>Understanding the graphics pipeline: vertices → shaders → rasterization</li>
-        <li>Intro to real-time rendering and performance considerations</li>
-    </ul>
+    <div class="content-section">
+        <div class="final-output">
+            <h2>🎯 Final Output</h2>
+            <p>
+                The result was a fully textured, smooth, and accurately modeled 3D letter "S" rendered in real time. 
+                The project strengthened my understanding of low-level graphics programming and gave me practical 
+                experience with the fundamentals that underlie modern 3D engines.
+            </p>
+        </div>
+    </div>
 
-    <h2>🔷 Final Output</h2>
-    <p>
-        The result was a fully textured, smooth, and accurately modeled 3D letter “S” rendered in real time. 
-        The project strengthened my understanding of low-level graphics programming and gave me practical 
-        experience with the fundamentals that underlie modern 3D engines.
-    </p>
-
-
-</section>
-
-
+    <script src="script.js"></script>
 </body>
 </html>
