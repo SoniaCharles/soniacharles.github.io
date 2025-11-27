@@ -223,49 +223,55 @@ h2 {
     }
 }
 
+/* ==== EDUCATION SECTION ==== */
 #education {
-  margin: 2rem 0;
+  max-width: 900px;
+  margin: 80px auto;
+  padding: 0 20px;
 }
 
 #education h2 {
-  font-size: 1.8rem;
-  margin-bottom: 1.5rem;
-  color: #2c3e50;
-  border-bottom: 3px solid #18453B;
-  padding-bottom: 0.5rem;
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 40px;
+  color: #333;
 }
 
 .education-entry {
-  margin-bottom: 2rem;
-  padding: 1.5rem;
-  background: #f8f9fa;
-  border-left: 4px solid #18453B;
-  border-radius: 4px;
-  transition: transform 0.2s, box-shadow 0.2s;
+  background: white;
+  margin-bottom: 30px;
+  padding: 30px;
+  border-radius: 10px;
+  border-left: 4px solid #6c63ff;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .education-entry:hover {
-  transform: translateX(4px);
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transform: translateY(-6px);
+  box-shadow: 0 10px 30px rgba(108, 99, 255, 0.2);
 }
 
 .education-header {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  margin-bottom: 0.75rem;
+  margin-bottom: 15px;
+  gap: 20px;
 }
 
 .education-entry h3 {
-  font-size: 1.3rem;
-  color: #18453B;
-  margin: 0 0 0.5rem 0;
+  font-size: 1.4rem;
+  color: #6c63ff;
+  margin: 0 0 10px 0;
+  font-weight: 700;
 }
 
 .degree {
   margin: 0;
-  font-size: 1.05rem;
-  color: #34495e;
+  font-size: 1.1rem;
+  color: #333;
+  font-weight: 600;
 }
 
 .date {
@@ -273,44 +279,68 @@ h2 {
   font-style: italic;
   white-space: nowrap;
   margin: 0;
+  font-size: 0.95rem;
 }
 
 .coursework {
-  margin: 0.75rem 0 0 0;
-  line-height: 1.6;
+  margin: 15px 0 0 0;
+  line-height: 1.8;
   color: #555;
+  font-size: 1rem;
 }
 
 .education-details {
   display: flex;
-  gap: 1rem;
+  gap: 15px;
   align-items: center;
-  margin-top: 0.5rem;
+  margin-top: 15px;
 }
 
 .badge {
   display: inline-block;
-  background: #18453B;
+  background: #6c63ff;
   color: white;
-  padding: 0.25rem 0.75rem;
-  border-radius: 12px;
+  padding: 6px 14px;
+  border-radius: 20px;
   font-size: 0.85rem;
   font-weight: 600;
 }
 
 .gpa {
-  color: #2c3e50;
+  color: #333;
   font-weight: 600;
+  font-size: 0.95rem;
 }
 
 /* Responsive design */
 @media (max-width: 768px) {
+  #education {
+    margin: 50px auto;
+  }
+
+  #education h2 {
+    font-size: 2rem;
+  }
+
+  .education-entry {
+    padding: 25px 20px;
+  }
+
   .education-header {
     flex-direction: column;
+    gap: 10px;
   }
   
   .date {
-    margin-top: 0.5rem;
+    margin-top: 5px;
+  }
+
+  .education-entry h3 {
+    font-size: 1.2rem;
+  }
+
+  .degree {
+    font-size: 1rem;
   }
 }
 
