@@ -313,3 +313,20 @@ h2 {
     margin-top: 0.5rem;
   }
 }
+
+.project-section {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+}
+
+.project-section h1 {
+    font-size: 32px;
+}
+
+.project-section ul {
+    margin-left: 20px;
+    line-height: 1.6;
+}
+
+
