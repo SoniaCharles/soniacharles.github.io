@@ -1,31 +1,357 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title>Campus Event Scheduler | Sonia</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <title>Meijer E-Commerce Platform | Sonia Charles Thalatoti</title>
+    <style>
+        .project-hero {
+            background: linear-gradient(135deg, #6c63ff, #9d7aff);
+            color: white;
+            padding: 80px 20px 60px;
+            text-align: center;
+        }
+
+        .project-hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        .project-subtitle {
+            font-size: 1.1rem;
+            opacity: 0.95;
+            margin-top: 10px;
+            font-weight: 400;
+        }
+
+        .project-hero .tech-stack {
+            display: inline-flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .tech-badge {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .project-overview {
+            max-width: 900px;
+            margin: -30px auto 0;
+            padding: 0 20px;
+        }
+
+        .overview-card {
+            background: white;
+            border-radius: 12px;
+            padding: 40px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            margin-bottom: 40px;
+        }
+
+        .overview-card p {
+            font-size: 1.15rem;
+            line-height: 1.8;
+            color: #555;
+            margin: 0;
+        }
+
+        .highlight-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .stat-card {
+            background: linear-gradient(135deg, #6c63ff, #8b7aff);
+            color: white;
+            padding: 25px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(108, 99, 255, 0.3);
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+        .stat-label {
+            font-size: 0.95rem;
+            opacity: 0.95;
+        }
+
+        .content-section {
+            max-width: 900px;
+            margin: 0 auto 50px;
+            padding: 0 20px;
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 25px;
+        }
+
+        .section-icon {
+            font-size: 1.5rem;
+        }
+
+        .section-header h2 {
+            font-size: 1.8rem;
+            margin: 0;
+            color: #333;
+            text-align: left;
+        }
+
+        .feature-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .feature-list li {
+            background: white;
+            padding: 20px 25px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #6c63ff;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .feature-list li:hover {
+            transform: translateX(5px);
+            box-shadow: 0 4px 12px rgba(108, 99, 255, 0.15);
+        }
+
+        .feature-list strong {
+            color: #6c63ff;
+            font-size: 1.05rem;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .skill-item {
+            background: white;
+            padding: 15px 20px;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: 500;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            transition: all 0.2s ease;
+        }
+
+        .skill-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 12px rgba(108, 99, 255, 0.15);
+            color: #6c63ff;
+        }
+
+        .impact-section {
+            background: linear-gradient(135deg, #f5f7fa, #e8ecf1);
+            border-radius: 12px;
+            padding: 40px;
+            margin-top: 40px;
+            border: 2px solid #e0e4e9;
+        }
+
+        .impact-section h2 {
+            color: #6c63ff;
+            margin-top: 0;
+            margin-bottom: 20px;
+            text-align: left;
+            font-size: 1.8rem;
+        }
+
+        .impact-section p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        .impact-section p:last-child {
+            margin-bottom: 0;
+        }
+
+        @media (max-width: 768px) {
+            .project-hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .project-subtitle {
+                font-size: 1rem;
+            }
+
+            .tech-badge {
+                font-size: 0.85rem;
+                padding: 6px 12px;
+            }
+
+            .overview-card {
+                padding: 30px 25px;
+            }
+
+            .stat-number {
+                font-size: 2rem;
+            }
+
+            .section-header h2 {
+                font-size: 1.5rem;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .impact-section {
+                padding: 30px 25px;
+            }
+        }
+    </style>
 </head>
-<script src="script.js"></script>
-
 <body>
+    <nav>
+        <div><strong>Sonia Charles Thalatoti</strong></div>
+        <div>
+            <a href="index.html">Home</a>
+            <a href="projects.html" class="active">Projects</a>
+            <a href="index.html#skills">Skills</a>
+            <a href="index.html#contact">Contact</a>
+        </div>
+    </nav>
 
-<nav>
-    <div><strong>Sonia Charles Thalatoti</strong></div>
-    <div>
-        <a href="index.html">Home</a>
-        <a href="projects.html" class="active">Projects</a>
-        <a href="index.html#skills">Skills</a>
-        <a href="index.html#contact">Contact</a>
+    <div class="project-hero">
+        <h1>Meijer E-Commerce Simulation Platform</h1>
+        <p class="project-subtitle">Backend Developer | Capstone Project</p>
+        <div class="tech-stack">
+            <span class="tech-badge">C# / .NET</span>
+            <span class="tech-badge">RESTful APIs</span>
+            <span class="tech-badge">SQL Server</span>
+            <span class="tech-badge">Microsoft Azure</span>
+            <span class="tech-badge">ReactJS</span>
+            <span class="tech-badge">GitLab CI/CD</span>
+        </div>
     </div>
-</nav>
 
-<section class="section">
-    <h2>Campus Event Scheduler</h2>
-    <p>
-        Collaborated on a campus event application built in Java using Android Studio.
-        Integrated Google Maps API for event locations, backend MySQL for event management,
-        and designed UI using Material Design.
-    </p>
-</section>
+    <div class="project-overview">
+        <div class="overview-card">
+            <p>
+                Led backend development for a full-stack e-commerce simulation platform in collaboration with Meijer, 
+                working within a team of 5 developers under an Agile framework. The project simulated a complete 
+                shopping experience with cart operations, checkout functionality, and an innovative mPerks rewards 
+                gamification system that significantly enhanced customer engagement.
+            </p>
+            <div class="highlight-stats">
+                <div class="stat-card">
+                    <div class="stat-number">5</div>
+                    <div class="stat-label">Team Members</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">20%</div>
+                    <div class="stat-label">Increased Engagement</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">API Uptime</div>
+                </div>
+            </div>
+        </div>
+    </div>
 
+    <div class="content-section">
+        <div class="section-header">
+            <span class="section-icon"></span>
+            <h2>Key Contributions</h2>
+        </div>
+        <ul class="feature-list">
+            <li>
+                <strong>RESTful API Development:</strong> Led backend development in C#/.NET, creating and maintaining 
+                robust RESTful APIs to support cart operations, checkout processes, and mPerks rewards gamification.
+            </li>
+            <li>
+                <strong>Database Architecture:</strong> Designed and optimized SQL Server database schemas, stored 
+                procedures, and queries to ensure high-performance data retrieval and scalability.
+            </li>
+            <li>
+                <strong>Rewards & Gamification Logic:</strong> Integrated donation logic and rewards algorithms that 
+                increased simulated customer interaction by 20%, enhancing user engagement.
+            </li>
+            <li>
+                <strong>Testing & Quality Assurance:</strong> Conducted extensive unit testing and debugging using 
+                Swagger and Postman, improving backend reliability and reducing API error rates.
+            </li>
+            <li>
+                <strong>Frontend Collaboration:</strong> Worked closely with ReactJS frontend teammates to ensure 
+                seamless API consumption and effective data visualization.
+            </li>
+            <li>
+                <strong>Cloud Deployment:</strong> Deployed and monitored backend services on Microsoft Azure App 
+                Service with GitLab CI/CD pipelines, maintaining high uptime and efficient delivery processes.
+            </li>
+        </ul>
+    </div>
+
+    <div class="content-section">
+        <div class="section-header">
+            <span class="section-icon"></span>
+            <h2>Technical Skills Applied</h2>
+        </div>
+        <div class="skills-grid">
+            <div class="skill-item">C# / .NET Framework</div>
+            <div class="skill-item">RESTful API Design</div>
+            <div class="skill-item">SQL Server</div>
+            <div class="skill-item">Database Optimization</div>
+            <div class="skill-item">Microsoft Azure</div>
+            <div class="skill-item">GitLab CI/CD</div>
+            <div class="skill-item">Agile Development</div>
+            <div class="skill-item">Unit Testing</div>
+            <div class="skill-item">API Documentation</div>
+            <div class="skill-item">ReactJS Integration</div>
+            <div class="skill-item">Swagger / Postman</div>
+            <div class="skill-item">Team Collaboration</div>
+        </div>
+    </div>
+
+    <div class="content-section">
+        <div class="impact-section">
+            <h2></h2>Project Impact & Outcomes</h2>
+            <p>
+                This capstone project delivered a fully functional e-commerce simulation platform that demonstrated 
+                enterprise-level backend development skills. The integrated mPerks rewards system successfully 
+                increased simulated customer engagement by 20%, showcasing the effectiveness of gamification in 
+                e-commerce applications.
+            </p>
+            <p>
+                Through this experience, I strengthened my expertise in full-stack development, cloud deployment, 
+                and Agile methodologies. The project emphasized the importance of cross-functional collaboration, 
+                robust testing practices, and delivering scalable solutions under real-world constraints. Working 
+                with industry-standard tools like Azure, GitLab, and SQL Server provided invaluable hands-on 
+                experience that directly translates to professional software engineering environments.
+            </p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
