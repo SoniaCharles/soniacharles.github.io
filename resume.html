@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Resume | Sonia Thalatoti</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Main CSS (the one you shared earlier) -->
+    <link rel="stylesheet" href="styles.css" />
+
+    <style>
+        /* Resume-specific layout */
+        .resume-wrapper {
+            max-width: 900px;
+            margin: 40px auto 80px auto;
+            padding: 40px 30px;
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+        }
+
+        .resume-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .resume-header h1 {
+            margin-bottom: 5px;
+            font-size: 2.2rem;
+        }
+
+        .resume-header p {
+            margin: 3px 0;
+            font-size: 0.98rem;
+        }
+
+        .resume-header a {
+            color: #6c63ff;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .resume-header a:hover {
+            text-decoration: underline;
+        }
+
+        .resume-section-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-top: 25px;
+            margin-bottom: 10px;
+            color: #333;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 4px;
+        }
+
+        .resume-item {
+            margin-bottom: 15px;
+        }
+
+        .resume-item-header {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+            align-items: baseline;
+        }
+
+        .resume-item-title {
+            font-weight: 600;
+            font-size: 1.05rem;
+        }
+
+        .resume-item-subtitle {
+            font-size: 0.95rem;
+            color: #555;
+        }
+
+        .resume-item-date {
+            font-size: 0.9rem;
+            color: #777;
+            white-space: nowrap;
+        }
+
+        .resume-item ul {
+            margin: 6px 0 0 18px;
+            line-height: 1.6;
+            font-size: 0.98rem;
+        }
+
+        .resume-tagline {
+            font-size: 0.95rem;
+            color: #555;
+            margin-top: 6px;
+        }
+
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 8px;
+        }
+
+        .skill-pill {
+            background: #f5f5ff;
+            border-radius: 999px;
+            padding: 5px 12px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: #333;
+        }
+
+        .resume-actions {
+            text-align: center;
+            margin-top: 25px;
+        }
+
+        .resume-actions .btn {
+            margin-top: 10px;
+        }
+
+        @media (max-width: 600px) {
+            .resume-wrapper {
+                padding: 25px 18px;
+            }
+
+            .resume-item-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .resume-item-date {
+                margin-top: 2px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- NAV (re-use your existing structure/links) -->
+    <nav>
+        <div class="logo">
+            <a href="index.html" style="text-decoration:none; color:#333; font-weight:700;">Sonia T.</a>
+        </div>
+        <div>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="projects.html">Projects</a>
+            <a href="resume.html" class="active">Resume</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <!-- MAIN RESUME CONTENT -->
+    <main class="section">
+        <div class="resume-wrapper reveal">
+            <!-- Header -->
+            <div class="resume-header">
+                <h1>Your Name Here</h1>
+                <p>Graduate Computer Science Student · Full-Stack & AI · ATS Integrations</p>
+                <p>
+                    <a href="mailto:youremail@domain.com">youremail@domain.com</a> ·
+                    (XXX) XXX-XXXX ·
+                    City, State ·
+                    <a href="https://www.linkedin.com/in/your-link" target="_blank">LinkedIn</a> ·
+                    <a href="https://github.com/your-github" target="_blank">GitHub</a>
+                </p>
+            </div>
+
+            <!-- Education -->
+            <div class="resume-section">
+                <h2 class="resume-section-title">Education</h2>
+
+                <div class="resume-item">
+                    <div class="resume-item-header">
+                        <div>
+                            <div class="resume-item-title">M.S. in Computer Science</div>
+                            <div class="resume-item-subtitle">Michigan State University</div>
+                        </div>
+                        <div class="resume-item-date">Aug 2024 – May 2026 (Expected)</div>
+                    </div>
+                    <p class="resume-tagline">Relevant Coursework: Parallel Computing, Advanced Algorithms, AI/ML, Security</p>
+                </div>
+
+                <div class="resume-item">
+                    <div class="resume-item-header">
+                        <div>
+                            <div class="resume-item-title">B.S. in Computer & Information Sciences</div>
+                            <div class="resume-item-subtitle">Your Undergrad University</div>
+                        </div>
+                        <div class="resume-item-date">Aug 2020 – May 2024</div>
+                    </div>
+                    <p class="resume-tagline">Honors: Dean’s List · GPA: X.XX / 4.00</p>
+                </div>
+            </div>
+
+            <!-- Experience -->
+            <div class="resume-section">
+                <h2 class="resume-section-title">Experience</h2>
+
+                <div class="resume-item">
+                    <div class="resume-item-header">
+                        <div>
+                            <div class="resume-item-title">Role Title (e.g., Software Engineer Intern)</div>
+                            <div class="resume-item-subtitle">Company Name · Location</div>
+                        </div>
+                        <div class="resume-item-date">May 2024 – Aug 2024</div>
+                    </div>
+                    <ul>
+                        <li>Bullet 1 about impact, using action verbs and metrics.</li>
+                        <li>Bullet 2 about what you built/used (React, Node, ATS, etc.).</li>
+                        <li>Bullet 3 focusing on outcomes (e.g., “reduced X by Y%”).</li>
+                    </ul>
+                </div>
+
+                <div class="resume-item">
+                    <div class="resume-item-header">
+                        <div>
+                            <div class="resume-item-title">Service Center Representative / RA</div>
+                            <div class="resume-item-subtitle">Michigan State University · East Lansing, MI</div>
+                        </div>
+                        <div class="resume-item-date">Aug 2023 – May 2024</div>
+                    </div>
+                    <ul>
+                        <li>Supported students and residents, resolving issues efficiently and professionally.</li>
+                        <li>Coordinated with campus teams to improve response workflows and communication.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Projects -->
+            <div class="resume-section">
+                <h2 class="resume-section-title">Projects</h2>
+
+                <div class="resume-item">
+                    <div class="resume-item-header">
+                        <div>
+                            <div class="resume-item-title">Hoogway.ai – AI-Powered Hiring Platform</div>
+                            <div class="resume-item-subtitle">React · Node.js · ATS APIs · Python · Azure</div>
+                        </div>
+                        <div class="resume-item-date">2024 – Present</div>
+                    </div>
+                    <ul>
+                        <li>Built connectors for ATS platforms (Avature, BambooHR, Workable, etc.) to unify candidate, job, and application data.</li>
+                        <li>Designed an AI ranking pipeline to score candidates per job using resume/job-description embeddings.</li>
+                        <li>Deployed microservices to cloud infrastructure for demos with recruiters and enterprise stakeholders.</li>
+                    </ul>
+                </div>
+
+                <div class="resume-item">
+                    <div class="resume-item-header">
+                        <div>
+                            <div class="resume-item-title">3D Letter Modeling & Texturing</div>
+                            <div class="resume-item-subtitle">C++ · OpenGL · Computer Graphics</div>
+                        </div>
+                        <div class="resume-item-date">Fall 2024</div>
+                    </div>
+                    <ul>
+                        <li>Implemented a 3D model of the letter “S” by tessellating a 2D shape and extruding it along the Z-axis.</li>
+                        <li>Generated and connected vertices to form quads for smooth side surfaces and a recognizable silhouette.</li>
+                        <li>Applied three distinct textures (top, bottom, sides) using a “rubber-band” mapping technique to simulate 2D-to-3D unfolding.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Skills -->
+            <div class="resume-section">
+                <h2 class="resume-section-title">Skills</h2>
+                <div class="skills-list">
+                    <span class="skill-pill">Python</span>
+                    <span class="skill-pill">JavaScript / TypeScript</span>
+                    <span class="skill-pill">React & React Native</span>
+                    <span class="skill-pill">Node.js</span>
+                    <span class="skill-pill">C# / .NET</span>
+                    <span class="skill-pill">C++</span>
+                    <span class="skill-pill">SQL</span>
+                    <span class="skill-pill">REST APIs</span>
+                    <span class="skill-pill">ATS Integrations</span>
+                    <span class="skill-pill">Machine Learning</span>
+                    <span class="skill-pill">Git / GitHub / Azure</span>
+                </div>
+            </div>
+
+            <!-- Optional: PDF Preview + Download -->
+            <div class="resume-actions">
+                <p>If you have a PDF resume, place it in your project and update the link below.</p>
+                <a href="Sonia_Resume.pdf" class="btn" target="_blank">Download PDF Resume</a>
+                <!-- Optional inline preview:
+                <div style="margin-top:20px;">
+                    <iframe src="Sonia_Resume.pdf" width="100%" height="500px" style="border:none;"></iframe>
+                </div>
+                -->
+            </div>
+        </div>
+    </main>
+
+    <!-- CONTACT (reuse your existing section ID so nav link works) -->
+    <footer id="contact" class="section">
+        <h2>Contact</h2>
+        <p>You can reach me at <a href="mailto:youremail@domain.com">youremail@domain.com</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/your-link" target="_blank">your-link</a></p>
+    </footer>
+
+    <!-- Simple reveal-on-scroll script (if you’re using it elsewhere) -->
+    <script>
+        const reveals = document.querySelectorAll('.reveal');
+        function handleScrollReveal() {
+            const windowHeight = window.innerHeight;
+            reveals.forEach(el => {
+                const top = el.getBoundingClientRect().top;
+                if (top < windowHeight - 80) {
+                    el.classList.add('active');
+                }
+            });
+        }
+        window.addEventListener('scroll', handleScrollReveal);
+        window.addEventListener('load', handleScrollReveal);
+    </script>
+</body>
+</html>
