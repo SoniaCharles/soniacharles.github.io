@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <title>Sudoku Game Project | Sonia Charles Thalatoti</title>
+    <style>
+        .project-hero {
+            background: linear-gradient(135deg, #6c63ff, #9d7aff);
+            color: white;
+            padding: 80px 20px 60px;
+            text-align: center;
+        }
+
+        .project-hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        .project-hero .tech-stack {
+            display: inline-flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .tech-badge {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .project-overview {
+            max-width: 900px;
+            margin: -30px auto 0;
+            padding: 0 20px;
+        }
+
+        .overview-card {
+            background: white;
+            border-radius: 12px;
+            padding: 40px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            margin-bottom: 40px;
+        }
+
+        .overview-card p {
+            font-size: 1.15rem;
+            line-height: 1.8;
+            color: #555;
+            margin: 0;
+        }
+
+        .content-section {
+            max-width: 900px;
+            margin: 0 auto 50px;
+            padding: 0 20px;
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 25px;
+        }
+
+        .section-header h2 {
+            font-size: 1.8rem;
+            margin: 0;
+            color: #333;
+            text-align: left;
+        }
+
+        .feature-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .feature-list li {
+            background: white;
+            padding: 20px 25px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #6c63ff;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .feature-list li:hover {
+            transform: translateX(5px);
+            box-shadow: 0 4px 12px rgba(108, 99, 255, 0.15);
+        }
+
+        .feature-list strong {
+            color: #6c63ff;
+            font-size: 1.05rem;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .skill-item {
+            background: white;
+            padding: 15px 20px;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: 500;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            transition: all 0.2s ease;
+        }
+
+        .skill-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 12px rgba(108, 99, 255, 0.15);
+            color: #6c63ff;
+        }
+
+        .final-output {
+            background: linear-gradient(135deg, #f5f7fa, #e8ecf1);
+            border-radius: 12px;
+            padding: 40px;
+            margin-top: 40px;
+            border: 2px solid #e0e4e9;
+        }
+
+        .final-output h2 {
+            color: #6c63ff;
+            margin-top: 0;
+            margin-bottom: 20px;
+            text-align: left;
+            font-size: 1.8rem;
+        }
+
+        .final-output p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #555;
+            margin: 0;
+        }
+
+        @media (max-width: 768px) {
+            .project-hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .tech-badge {
+                font-size: 0.85rem;
+                padding: 6px 12px;
+            }
+
+            .overview-card {
+                padding: 30px 25px;
+            }
+
+            .section-header h2 {
+                font-size: 1.5rem;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .final-output {
+                padding: 30px 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div href="index.html"><strong>Sonia Charles Thalatoti</strong></div>
+        <div>
+            <a href="index.html">Home</a>
+            <a href="projects.html" class="active">Projects</a>
+        </div>
+    </nav>
+
+    <div class="project-hero">
+        <h1>Sudoku Game Implementation</h1>
+        <div class="tech-stack">
+            <span class="tech-badge">C++</span>
+            <span class="tech-badge">Object-Oriented Programming</span>
+            <span class="tech-badge">Game Design</span>
+        </div>
+    </div>
+
+    <div class="project-overview">
+        <div class="overview-card">
+            <p>
+                This project involved developing a Sudoku game in C++ using object-oriented programming principles.
+                Working alongside fellow engineers, I helped build an interactive game that included multiple difficulty levels,
+                user-friendly gameplay features, and an automatic solving option. The project strengthened my experience in
+                designing structured software, handling user interaction, and solving logic-based programming problems.
+            </p>
+        </div>
+    </div>
+
+    <div class="content-section">
+        <div class="section-header">
+            <h2>Key Contributions</h2>
+        </div>
+        <ul class="feature-list">
+            <li>
+                <strong>Game Development:</strong> Helped develop a fully interactive Sudoku game with logic-driven gameplay and responsive user interaction.
+            </li>
+            <li>
+                <strong>Difficulty Levels:</strong> Implemented three difficulty settings to provide different gameplay experiences for beginner, intermediate, and advanced users.
+            </li>
+            <li>
+                <strong>Automatic Solver:</strong> Added an automatic solving feature to demonstrate algorithmic problem-solving and puzzle validation.
+            </li>
+            <li>
+                <strong>Team Collaboration:</strong> Worked collaboratively with fellow engineers to design features, test functionality, and improve the overall user experience.
+            </li>
+        </ul>
+    </div>
+
+    <div class="content-section">
+        <div class="section-header">
+            <h2>Technical Skills & Concepts Learned</h2>
+        </div>
+        <div class="skills-grid">
+            <div class="skill-item">Object-Oriented Design</div>
+            <div class="skill-item">C++ Programming</div>
+            <div class="skill-item">Problem Solving</div>
+            <div class="skill-item">Game Logic</div>
+            <div class="skill-item">User Interaction</div>
+            <div class="skill-item">Algorithm Design</div>
+            <div class="skill-item">Debugging</div>
+            <div class="skill-item">Team Collaboration</div>
+        </div>
+    </div>
+
+    <div class="content-section">
+        <div class="final-output">
+            <h2>Final Output</h2>
+            <p>
+                The final result was a functional Sudoku game that allowed users to play interactively, select difficulty levels,
+                and use an automatic solver when needed. This project improved my ability to design structured C++ applications
+                and apply software engineering principles to a logic-heavy game environment.
+            </p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
