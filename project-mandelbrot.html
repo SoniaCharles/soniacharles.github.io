@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="styles.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<title>Mandelbrot Parallel Computing Project | Sonia Charles Thalatoti</title>
+
+<style>
+
+.project-hero {
+    background: linear-gradient(135deg,#6c63ff,#9d7aff);
+    color:white;
+    padding:80px 20px 60px;
+    text-align:center;
+}
+
+.project-hero h1{
+    font-size:2.5rem;
+    margin-bottom:15px;
+    font-weight:700;
+}
+
+.project-hero .tech-stack{
+    display:inline-flex;
+    gap:10px;
+    flex-wrap:wrap;
+    justify-content:center;
+    margin-top:20px;
+}
+
+.tech-badge{
+    background:rgba(255,255,255,0.2);
+    backdrop-filter:blur(10px);
+    padding:8px 16px;
+    border-radius:20px;
+    font-size:0.95rem;
+    font-weight:600;
+    border:1px solid rgba(255,255,255,0.3);
+}
+
+.project-overview{
+    max-width:900px;
+    margin:-30px auto 0;
+    padding:0 20px;
+}
+
+.overview-card{
+    background:white;
+    border-radius:12px;
+    padding:40px;
+    box-shadow:0 10px 40px rgba(0,0,0,0.1);
+    margin-bottom:40px;
+}
+
+.overview-card p{
+    font-size:1.15rem;
+    line-height:1.8;
+    color:#555;
+}
+
+.content-section{
+    max-width:900px;
+    margin:0 auto 50px;
+    padding:0 20px;
+}
+
+.section-header{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    margin-bottom:25px;
+}
+
+.section-header h2{
+    font-size:1.8rem;
+    margin:0;
+}
+
+.feature-list{
+    list-style:none;
+    padding:0;
+}
+
+.feature-list li{
+    background:white;
+    padding:20px 25px;
+    margin-bottom:15px;
+    border-radius:8px;
+    border-left:4px solid #6c63ff;
+    box-shadow:0 2px 8px rgba(0,0,0,0.08);
+}
+
+.skills-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:15px;
+    margin-top:20px;
+}
+
+.skill-item{
+    background:white;
+    padding:15px 20px;
+    border-radius:8px;
+    text-align:center;
+    font-weight:500;
+    box-shadow:0 2px 8px rgba(0,0,0,0.08);
+}
+
+.final-output{
+    background:linear-gradient(135deg,#f5f7fa,#e8ecf1);
+    border-radius:12px;
+    padding:40px;
+    border:2px solid #e0e4e9;
+}
+
+.final-output h2{
+    color:#6c63ff;
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+<div href="index.html"><strong>Sonia Charles Thalatoti</strong></div>
+<div>
+<a href="index.html">Home</a>
+<a href="projects.html" class="active">Projects</a>
+</div>
+</nav>
+
+
+<div class="project-hero">
+<h1>Massively Parallel Mandelbrot Renderer & GPU Microbenchmarks</h1>
+
+<div class="tech-stack">
+<span class="tech-badge">C++</span>
+<span class="tech-badge">CUDA</span>
+<span class="tech-badge">PTX</span>
+<span class="tech-badge">Pthreads</span>
+<span class="tech-badge">SIMD</span>
+<span class="tech-badge">Parallel Computing</span>
+</div>
+</div>
+
+
+<div class="project-overview">
+<div class="overview-card">
+
+<p>
+This project focused on implementing a high-performance Mandelbrot set renderer using multiple layers of
+parallel computing techniques. The implementation explored CPU vectorization, multi-core threading,
+instruction-level parallelism, and GPU acceleration with CUDA.
+</p>
+
+<p>
+In addition to rendering the fractal, I developed GPU microbenchmarks to analyze instruction throughput
+and memory latency across different levels of GPU memory. The goal was to better understand how warp
+scheduling, memory access patterns, and instruction latency affect performance in modern GPUs.
+</p>
+
+</div>
+</div>
+
+
+<div class="content-section">
+
+<div class="section-header">
+<h2>Key Contributions</h2>
+</div>
+
+<ul class="feature-list">
+
+<li>
+<strong>Parallel Mandelbrot Rendering:</strong>
+Implemented a Mandelbrot fractal renderer using multiple parallelization techniques including
+SIMD vectorization, instruction-level parallelism, and multi-threading with Pthreads.
+</li>
+
+<li>
+<strong>GPU Acceleration:</strong>
+Ported the workload to CUDA to leverage warp-level parallelism across streaming multiprocessors,
+significantly improving computation speed compared to CPU implementations.
+</li>
+
+<li>
+<strong>Microbenchmark Development:</strong>
+Designed CUDA and PTX microbenchmarks to measure floating-point throughput (FFMA) and
+memory latency across L1, L2, and global GPU memory.
+</li>
+
+<li>
+<strong>Memory Access Analysis:</strong>
+Evaluated the performance impact of coalesced versus non-coalesced memory accesses and
+how memory hierarchy affects GPU throughput.
+</li>
+
+</ul>
+
+</div>
+
+
+<div class="content-section">
+
+<div class="section-header">
+<h2>Technical Skills & Concepts Learned</h2>
+</div>
+
+<div class="skills-grid">
+
+<div class="skill-item">CUDA Programming</div>
+<div class="skill-item">GPU Architecture</div>
+<div class="skill-item">Warp Scheduling</div>
+<div class="skill-item">Memory Hierarchy (L1/L2/Global)</div>
+<div class="skill-item">SIMD Vectorization</div>
+<div class="skill-item">Instruction-Level Parallelism</div>
+<div class="skill-item">Multi-Core Programming</div>
+<div class="skill-item">Performance Profiling</div>
+
+</div>
+
+</div>
+
+
+<div class="content-section">
+
+<div class="final-output">
+
+<h2>Final Outcome</h2>
+
+<p>
+The final implementation demonstrated how different layers of parallelism—from SIMD and threading
+on the CPU to warp-level execution on the GPU—can dramatically improve computational performance.
+Through benchmarking and experimentation, the project provided hands-on insight into GPU execution
+models, instruction latency, and memory behavior in high-performance computing systems.
+</p>
+
+</div>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
